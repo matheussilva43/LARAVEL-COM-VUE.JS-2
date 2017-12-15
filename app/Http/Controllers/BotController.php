@@ -29,7 +29,7 @@ class BotController extends Controller
         $text = new Text($senderId);
         $callSendApi = new CallSendApi(config('botfb.pageAccessToken'));
 
-        callSendApi->make($text->message('Oii, eu sou um bot...'));
+        $callSendApi->make($text->message('Oii, eu sou um bot...'));
         $callSendApi->make($text->message('Você digitou: '. $message));
 
         return '';
